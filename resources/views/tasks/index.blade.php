@@ -17,7 +17,7 @@
             <tbody>
                 @foreach ($tasks as $task)
                 <tr>
-                    <td><a class="link link-hover text-info" href="{{ route('messages.show', $task->id) }}">{{ $task->id }}</a></td>
+                    <td><a class="link link-hover text-info" href="{{ route('tasks.show', $task->id) }}">{{ $task->id }}</a></td>
                     <td>{{ $task->content }}</td>
                 </tr>
                 @endforeach
@@ -26,6 +26,6 @@
     @endif
     
     {{-- タスク作成ページへのリンク --}}
-    <a class="btn btn-primary" href="{{ route('messages.create') }}">新規タスクの投稿</a>
+    <a class="btn btn-primary" href="{{ route('tasks.create') }}">新規タスクの投稿</a>
     
 @endsection
